@@ -10,7 +10,7 @@ data=pd.read_excel('Data.xlsx',engine='openpyxl')
 sample = pd.read_excel('Sample.xlsx',engine='openpyxl')
 test_data = pd.read_excel('Test_data.xlsx',engine='openpyxl')
 test_data = pd.concat([test_data,sample],axis=1)
-df= pd.concat([data,test])
+df= pd.concat([data,test_data])
 
 ##Droping columns that does not seem practical to ask to a customer.
 df.drop(labels=['Route','Arrival_Time','Duration','Additional_Info'],axis=1,inplace=True)
